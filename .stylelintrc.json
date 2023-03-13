@@ -3,11 +3,7 @@
         "stylelint-config-standard",
         "stylelint-config-idiomatic-order"
     ],
-    "customSyntax": [
-        "postcss-syntax",
-        "postcss-lit",
-        "postcss-styled"
-    ],
+    "customSyntax": "postcss-syntax",
     "rules": {
         "declaration-colon-newline-after": "always-multi-line",
         "property-no-unknown": [
