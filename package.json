@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --port 3000",
     "build": "vite build",
     "preview": "vite preview",
     "lint": "eslint .",
@@ -23,6 +23,7 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@csstools/postcss-nesting-experimental": "2.0.0",
     "@testing-library/dom": "^9.0.1",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^14.0.0",
@@ -44,8 +45,8 @@
     "eslint-plugin-testing-library": "^5.10.2",
     "htmlhint": "^1.1.4",
     "jsdom": "^21.1.1",
-    "postcss": "^8.4.21",
-    "postcss-nesting": "^11.2.1",
+    "postcss": "8.4.21",
+    "postcss-cli": "10.1.0",
     "postcss-syntax": "^0.36.2",
     "prettier": "^2.8.4",
     "stylelint": "^15.2.0",
