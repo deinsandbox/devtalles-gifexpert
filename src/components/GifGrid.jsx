@@ -1,27 +1,24 @@
 import PropTypes from 'prop-types'
-import { useEffect, useState } from 'react'
-import { getGifList } from '../helpers/getGifList'
+import GifItem from './GifItem'
+import useFetchGif from '../hooks/useFetchGif'
 
 const GifGrid = (props) => {
-  const [imagesList, setImagesList] = useState([])
-
-  useEffect(() => {
-    getGifList(props.category).then((list) => {
-      setImagesList(() => list)
-    })
-  }, [props.category])
+  const { imagesList, isLoading } = useFetchGif(props.category)
 
   return (
     <>
-      <h2>{props.category}</h2>
+      <h2>
+        <button className='btn-delete' onClick={() => props.handleRemoveCategory(props.category)}>
+          ❌
+        </button>{' '}
+        {props.category}
+      </h2>
+
+      {isLoading && <div>Cargando...</div>}
 
       <div className="masonry">
         {!!imagesList?.length &&
-          imagesList.map((img) => (
-            <div key={img.id} className="masonry-item">
-              <img src={img.url} alt={img.title} className="masonry-image" />
-            </div>
-          ))}
+          imagesList.map((image) => <GifItem key={image.id} {...image} />)}
       </div>
 
       <hr />
