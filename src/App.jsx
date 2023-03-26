@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import './App.css'
-import AddCategory from './components/AddCategory'
-import GifGrid from './components/GifGrid'
+import { AddCategory, GifGrid } from './components'
 
 function App() {
   const initStat = [
