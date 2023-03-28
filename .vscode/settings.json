@@ -66,5 +66,8 @@
         ],
     },
     "dotenv.enableAutocloaking": false,
-    "reactSnippets.settings.importReactOnTop": false
+    "reactSnippets.settings.importReactOnTop": false,
+    "cSpell.words": [
+        "lcov"
+    ]
 }
