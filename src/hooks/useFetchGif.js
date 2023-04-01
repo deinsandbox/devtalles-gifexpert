@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import { useEffect, useState } from 'react'
 import { getGifList } from '../helpers/getGifList'
 
@@ -14,6 +15,10 @@ const useFetchGif = (category) => {
   }, [category])
 
   return { imagesList, isLoading }
+}
+
+useFetchGif.propTypes = {
+  category: PropTypes.string.isRequired
 }
 
 export default useFetchGif

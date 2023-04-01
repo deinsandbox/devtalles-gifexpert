@@ -28,6 +28,6 @@ export default defineConfig({
       lines: 0,
     },
     environment: 'jsdom',
-    setupFiles: './vitest/setup.ts',
+    setupFiles: '.vitest/setup.ts',
   }
 })
