@@ -10,12 +10,14 @@ const AddCategory = (props) => {
 
   const onSubmit = (event) => {
     event.preventDefault()
-    props.handleAddCategory(value.trim())
+    const category = value.trim()
+    if (category.length <= 1) return
+    props.handleAddCategory(category)
     setValue('')
   }
 
   return (
-    <form onSubmit={onSubmit}>
+    <form onSubmit={onSubmit} name="form-category">
       <input
         type="text"
         placeholder="Buscar GIFs"
