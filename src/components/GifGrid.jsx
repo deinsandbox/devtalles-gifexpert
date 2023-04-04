@@ -8,7 +8,10 @@ const GifGrid = (props) => {
   return (
     <>
       <h2>
-        <button className='btn-delete' onClick={() => props.handleRemoveCategory(props.category)}>
+        <button
+          className="btn-delete"
+          onClick={() => props.handleRemoveCategory(props.category)}
+        >
           ❌
         </button>{' '}
         {props.category}
