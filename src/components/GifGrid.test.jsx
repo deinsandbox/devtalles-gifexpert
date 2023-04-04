@@ -1,10 +1,15 @@
 import { render, screen } from '@testing-library/react'
-import { it, expect, describe, vi } from 'vitest'
+import { afterEach, it, expect, describe, vi } from 'vitest'
 import GifGrid from './GifGrid'
 import useFetchGif from '../hooks/useFetchGif'
 
 describe('<GifGrid/>', () => {
   vi.mock('../hooks/useFetchGif')
+
+  afterEach(() => {
+    vi.clearAllMocks()
+    vi.resetAllMocks()
+  })
 
   it('should show the loading at start', () => {
     useFetchGif.mockReturnValue({
