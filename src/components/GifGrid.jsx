@@ -10,6 +10,7 @@ const GifGrid = (props) => {
       <h2>
         <button
           className="btn-delete"
+          id={props.category.toLowerCase().replaceAll(' ', '-')}
           onClick={() => props.handleRemoveCategory(props.category)}
         >
           ❌

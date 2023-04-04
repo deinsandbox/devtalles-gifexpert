@@ -22,8 +22,8 @@ function App() {
   }
 
   const handleRemoveCategory = (category) => {
-    const fiteredCategories = categories.filter((cat) => cat !== category)
-    setCategories(fiteredCategories)
+    const filteredCategories = categories.filter((cat) => cat !== category)
+    setCategories(filteredCategories)
   }
 
   return (
